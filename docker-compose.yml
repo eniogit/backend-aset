@@ -1,0 +1,14 @@
+services:
+  db:
+    image: mongo
+    ports:
+      - "27017:27017"
+  server:
+    build: .
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - DB=mongodb://db:27017/db
+    depends_on:
+      - db

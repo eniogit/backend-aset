@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "joi": "^17.11.0",
+    "jose": "^5.1.1",
+    "mongoose": "^8.0.1",
+    "nodemon": "^3.0.1"
+  }
+}

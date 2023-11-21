@@ -1,0 +1,366 @@
+{
+	"info": {
+		"_postman_id": "8ff378d7-07d1-42ab-ba6a-298503a96c16",
+		"name": "aset",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5919821"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eniovrushi.ev@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:{{PORT}}/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{PORT}}/api/cities",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get city by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{PORT}}/api/cities/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"cities",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "655bdf36ce52df10296ff803"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{PORT}}/api/cities?name=alba",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"cities"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "alba"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create city",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVuaW92cnVzaGkuZXZAZ21haWwuY29tIiwiaWQiOiI2NTViZDg5MGZmNjRkMTJhY2ZiMGU4MmQiLCJpc0FkbWluIjp0cnVlfQ.WXluBxYb3ZwF6IHjscn7kwPc3pjgpKAj4FSExsyfsMo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pristina\",\r\n    \"country\": \"Kosovo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:{{PORT}}/api/cities",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create trip",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVuaW92cnVzaGkuZXZAZ21haWwuY29tIiwiaWQiOiI2NTViZDg5MGZmNjRkMTJhY2ZiMGU4MmQiLCJpc0FkbWluIjp0cnVlfQ.WXluBxYb3ZwF6IHjscn7kwPc3pjgpKAj4FSExsyfsMo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to\": \"655bdf36ce52df10296ff803\",\r\n    \"from\": \"655be0fe526b5be9d5c517c8\",\r\n    \"departure\": \"2023-12-23T14:00:00.000\",\r\n    \"arrival\": \"2023-12-23T15:00:00.000\",\r\n    \"price\": 400,\r\n    \"seats\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:{{PORT}}/api/trips",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"trips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all trips",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVuaW92cnVzaGkuZXZAZ21haWwuY29tIiwiaWQiOiI2NTViZDg5MGZmNjRkMTJhY2ZiMGU4MmQiLCJpc0FkbWluIjp0cnVlfQ.WXluBxYb3ZwF6IHjscn7kwPc3pjgpKAj4FSExsyfsMo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{PORT}}/api/trips",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"trips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search trips",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVuaW92cnVzaGkuZXZAZ21haWwuY29tIiwiaWQiOiI2NTViZDg5MGZmNjRkMTJhY2ZiMGU4MmQiLCJpc0FkbWluIjp0cnVlfQ.WXluBxYb3ZwF6IHjscn7kwPc3pjgpKAj4FSExsyfsMo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{PORT}}/api/trips?from=655bdf36ce52df10296ff803&to=655be0f0526b5be9d5c517c5&departure=2023-12-01",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"trips"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "655bdf36ce52df10296ff803"
+						},
+						{
+							"key": "to",
+							"value": "655be0f0526b5be9d5c517c5"
+						},
+						{
+							"key": "departure",
+							"value": "2023-12-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get trip by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVuaW92cnVzaGkuZXZAZ21haWwuY29tIiwiaWQiOiI2NTViZDg5MGZmNjRkMTJhY2ZiMGU4MmQiLCJpc0FkbWluIjp0cnVlfQ.WXluBxYb3ZwF6IHjscn7kwPc3pjgpKAj4FSExsyfsMo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{PORT}}/api/trips/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"trips",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "655be36cec1c14ae40056a63"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eniovrushi.ev@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:{{PORT}}/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buy ticket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVuaW92cnVzaGkuZXZAZ21haWwuY29tIiwiaWQiOiI2NTViZDg5MGZmNjRkMTJhY2ZiMGU4MmQiLCJpc0FkbWluIjp0cnVlfQ.WXluBxYb3ZwF6IHjscn7kwPc3pjgpKAj4FSExsyfsMo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"trip\": \"655be36cec1c14ae40056a63\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:{{PORT}}/api/tickets",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "PORT",
+			"value": "8000"
+		}
+	]
+}
